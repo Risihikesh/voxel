@@ -30,7 +30,7 @@ const NewCompany = ({ isOpenNew, setIsOpenNew }) => {
     console.log(formData);
     e.preventDefault();
     try {
-      const response = await axios.post(`${host}api/startups`, formData);
+      const response = await axios.post(`${host}/api/startups`, formData);
       console.log("Response:", response.data); // Log the response data
       toggleModal(); // Close the modal after successful submission
       // Perform any additional actions on successful submission if needed

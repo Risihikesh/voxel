@@ -15,7 +15,7 @@ const HeaderBar = ({ setIndustryType }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`${host}api/getIndustry`);
+        const response = await axios.get(`${host}/api/getIndustry`);
         setIndustryData(response.data);
       } catch (error) {
         console.error("Error:", error);
@@ -34,7 +34,7 @@ const HeaderBar = ({ setIndustryType }) => {
   return (
     <div className=" text-white p-4 flex justify-between items-center">
       <div className="relative inline-block space-x-4">
-        {/* Left section - Dropdown button */}
+        
 
         <button
           id="dropdownHoverButton"

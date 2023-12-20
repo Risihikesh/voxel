@@ -12,7 +12,7 @@ const Home = ({ searchQuery }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`${host}api/startups`);
+        const response = await axios.get(`${host}/api/startups`);
         // Ensure response.data is an array before setting the state
         if (Array.isArray(response.data)) {
           setStartupsData(response.data);
@@ -32,7 +32,7 @@ const Home = ({ searchQuery }) => {
       console.log(searchQuery);
       try {
         const response = await axios.get(
-          `${host}api/startups/search?keyword=${searchQuery}`
+          `${host}/api/startups/search?keyword=${searchQuery}`
         );
         // Ensure response.data is an array before setting the state
         if (Array.isArray(response.data)) {
